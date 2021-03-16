@@ -12,7 +12,7 @@ class HornedBeasts extends React.Component {
       numberOfHearts:0
     };
   }
- 
+
 
   render() {
     const hearts = () => {
@@ -33,7 +33,7 @@ class HornedBeasts extends React.Component {
             </Card.Text>
             <Card.Text>
               {this.props.description}
-            </Card.Text>  
+            </Card.Text>
           </Card.Body>
         </Card>
       </div>

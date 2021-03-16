@@ -17,7 +17,7 @@ class Main extends React.Component{
     return(
       <div>
         {info.map((el) => {
-          return <CardColumns> 
+          return <CardColumns>
             <HornedBeasts
               src={el.image_url}
               title={el.title}
