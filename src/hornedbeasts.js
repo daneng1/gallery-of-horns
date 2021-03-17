@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
+import './hornedBeasts.css';
 
 
 
@@ -13,23 +14,31 @@ class HornedBeasts extends React.Component {
     };
   }
 
+  // iNeedMoney = () => {
+  //   this.props.iWantMoney();
+  // }
+  hearts = () => {
+    this.setState({ numberOfHearts: this.state.numberOfHearts + 1});
+    // this.props.displayAsModal(this.props.index);
+  };
+
+  enlargeImage = () => {
+    this.props.displayAsModal(this.props.index);
+  };
 
   render() {
-    const hearts = () => {
-      this.setState({ numberOfHearts: this.state.numberOfHearts + 1});
-    };
     // const bkgndColor = () => {
     //   this.setState( bg = "primary");
     // };
     // console.log('props of the square:', this.props);
     return(
       <div>
-        <Card style={{ width: '18rem' }}>
-          <Card.Img src={this.props.src} onClick={hearts}/>
-          <Card.Body>
+        <Card className="card" bg="primary" text="white" border="primary" style={{ width: '18rem' }}>
+          <Card.Img src={this.props.src} onClick={this.enlargeImage}/>
+          <Card.Body onClick={this.hearts}>
             <Card.Title>{this.props.title}</Card.Title>
-            <Card.Text>
-              ❤️{this.state.numberOfHearts}
+            <Card.Text >
+              ❤️  {this.state.numberOfHearts}
             </Card.Text>
             <Card.Text>
               {this.props.description}

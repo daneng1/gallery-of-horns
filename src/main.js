@@ -1,33 +1,35 @@
 import React from 'react';
 import HornedBeasts from './hornedbeasts';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { CardColumns } from 'react-bootstrap';
-
+import CardDeck from 'react-bootstrap/CardDeck';
 
 
 class Main extends React.Component{
-  // construcrot(props) {
-  //   super(props);
-  //   this.state = {
+  // iNeedMoney = () => {
+  //   this.props.iWantMoney();
+  // }
 
   //   };
   // }
   render(){
-    var info = require('./data.json');
     return(
       <div>
-        {info.map((el) => {
-          return <CardColumns>
-            <HornedBeasts
-              src={el.image_url}
-              title={el.title}
-              description={el.description}
-              keyword={el.keyword}
-              horns={el.horns}
-            />
-          </CardColumns>;
-        })
-        };
+        <CardDeck>
+          {this.props.cards.map((el, index) => (
+            <div key={index}>
+              <HornedBeasts
+                index={index}
+                src={el.image_url}
+                title={el.title}
+                description={el.description}
+                keyword={el.keyword}
+                horns={el.horns}
+                displayAsModal={this.props.displayAsModal}
+              />
+            </div>
+          ),
+          )};
+        </CardDeck>
       </div>
     );
   }
