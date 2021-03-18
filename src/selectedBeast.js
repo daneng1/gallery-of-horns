@@ -6,10 +6,15 @@ class SelectedBeast extends React.Component{
     console.log(this.props);
     return (
       <>
-        <Modal size={'xl'} show={this.props.show} onHide={this.props.handleClose}>
+        <Modal size={'l'} show={this.props.show} onHide={this.props.handleClose}>
           <Modal.Dialog>
+            <Modal.Header closeButton>
+              <Modal.Title>{this.props.favoriteBeast.title}</Modal.Title>
+            </Modal.Header>
             <Modal.Body>
               <img width={450} src={this.props.favoriteBeast.image_url}/>
+              <p>{this.props.favoriteBeast.description}</p>
+              <p>{this.props.favoriteBeast.keyword}</p>
             </Modal.Body>
           </Modal.Dialog>
         </Modal>
