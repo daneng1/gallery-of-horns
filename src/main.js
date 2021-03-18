@@ -24,7 +24,7 @@ class Main extends React.Component{
                 description={el.description}
                 keyword={el.keyword}
                 horns={el.horns}
-                displayAsModal={this.props.displayAsModal}
+                displayAsModal={() => this.props.displayAsModal(index)}
               />
             </div>
           ),

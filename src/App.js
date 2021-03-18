@@ -37,6 +37,7 @@ class App extends React.Component{
           show={this.state.displayModal}
           handleClose={this.handleClose}
           favoriteBeast={this.state.favoriteBeast}/>
+          title={this.state.title}
         <Footer />
       </>
     );
