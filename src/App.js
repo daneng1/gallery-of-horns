@@ -4,6 +4,7 @@ import Main from './main';
 import Footer from './footer';
 import SelectedBeast from './selectedBeast';
 import rawData from './data.json';
+import Form from './formInfo';
 
 class App extends React.Component{
   constructor(props){
@@ -30,6 +31,7 @@ class App extends React.Component{
     return(
       <>
         <Header />
+        <Form></Form>
         <Main
           displayAsModal={this.displayAsModal}
           cards={this.state.newData}/>
