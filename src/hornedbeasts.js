@@ -3,9 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import './hornedBeasts.css';
 
-
-
-
 class HornedBeasts extends React.Component {
   constructor(props) {
     super(props);
@@ -14,12 +11,9 @@ class HornedBeasts extends React.Component {
     };
   }
 
-  // iNeedMoney = () => {
-  //   this.props.iWantMoney();
-  // }
   hearts = () => {
     this.setState({ numberOfHearts: this.state.numberOfHearts + 1});
-    // this.props.displayAsModal(this.props.index);
+
   };
 
   enlargeImage = () => {
@@ -27,10 +21,6 @@ class HornedBeasts extends React.Component {
   };
 
   render() {
-    // const bkgndColor = () => {
-    //   this.setState( bg = "primary");
-    // };
-    // console.log('props of the square:', this.props);
     return(
       <div>
         <Card className="card" bg="primary" text="white" border="primary" style={{ width: '18rem' }}>

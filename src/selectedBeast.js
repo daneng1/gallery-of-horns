@@ -6,9 +6,11 @@ class SelectedBeast extends React.Component{
     console.log(this.props);
     return (
       <>
-        <Modal show={this.props.show} onHide={this.props.handleClose}>
+        <Modal size={'xl'} show={this.props.show} onHide={this.props.handleClose}>
           <Modal.Dialog>
-            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+            <Modal.Body>
+              <img width={450} src={this.props.favoriteBeast.image_url}/>
+            </Modal.Body>
           </Modal.Dialog>
         </Modal>
       </>
