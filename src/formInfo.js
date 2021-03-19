@@ -1,23 +1,28 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import Form from 'react-bootstrap/Form';
+import './formInfo.css';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 
-class Form extends React.Component{
+class FormInfo extends React.Component{
+
   render() {
     return(
-      <Form>
-        <Form.Group controlId="exampleForm.SelectCustom">
-          <Form.Label>Custom select</Form.Label>
-          <Form.Control as="select" custom>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </Form.Control>
-        </Form.Group>
-      </Form>
-    )}
+      <Dropdown onSelect={this.props.handleInput}>
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          Dropdown Button
+        </Dropdown.Toggle>
+        <Dropdown.Menu>
+          <Dropdown.Item href="#/action-1" eventKey='all' as='button' >All</Dropdown.Item>
+          <Dropdown.Item href="#/action-2" eventKey='1' as='button' >1</Dropdown.Item>
+          <Dropdown.Item href="#/action-3" eventKey='2' as='button' >2</Dropdown.Item>
+          <Dropdown.Item href="#/action-3" eventKey='3' as='button' >3</Dropdown.Item>
+          <Dropdown.Item href="#/action-3" eventKey='100' as='button' >100</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+    );
+  }
 }
-export default Form;
+
+export default FormInfo;

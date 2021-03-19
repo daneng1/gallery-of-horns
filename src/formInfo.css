@@ -1,0 +1,15 @@
+.form-group{
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-label{
+
+}
+
+.custom-select {
+  color: floralwhite;
+  background-color:#007bff;
+}

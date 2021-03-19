@@ -33,6 +33,9 @@ class HornedBeasts extends React.Component {
             <Card.Text>
               {this.props.description}
             </Card.Text>
+            <Card.Text>
+              Number of Horns: {this.props.horns}
+            </Card.Text>
           </Card.Body>
         </Card>
       </div>
