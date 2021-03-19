@@ -24,13 +24,12 @@ class App extends React.Component{
     if (e === 'all') {
       return value;
     } else {
-      return value.horns === Number(e);} 
+      return value.horns === Number(e);}
   })
   });
   };
 
   render() {
-    
     return(
       <>
         <Header />
