@@ -4,7 +4,7 @@ import './App.css';
 class Header extends React.Component{
   render(){
     return(
-      <h1 className="header">Welcome to Horned Beasts</h1>
+      <h1 className="header">Horned Beasts</h1>
     );
   }
 }

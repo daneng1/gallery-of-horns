@@ -17,7 +17,7 @@ class HornedBeasts extends React.Component {
   };
 
   enlargeImage = () => {
-    this.props.displayAsModal(this.props.index);
+    this.props.displayAsModal(this.props.title);
   };
 
   render() {

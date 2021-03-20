@@ -1,12 +1,7 @@
-.form-group{
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.form-label{
-
+#button-group{
+  width: 600px;
+  margin-left: 50px;
+  color: aqua;
 }
 
 .custom-select {
