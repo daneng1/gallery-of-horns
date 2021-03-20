@@ -11,22 +11,27 @@ class App extends React.Component{
     super(props);
     this.state = {
       newData: rawData,
-      filteredData: null,
+      filteredData: rawData,
       displayModal: false,
       favoriteBeast: {},
     };
   }
 
-  displayAsModal = (index) => {this.setState({ favoriteBeast: this.state.newData[index], displayModal: true });
+  displayAsModal = (name) => {
+    console.log('open beast', name);
+    const favoriteBeast = rawData.find(beast => beast.title === name);
+    this.setState({ favoriteBeast, displayModal: true });
   }
 
-  handleInput = (e) => {this.setState({ filteredData: this.state.newData.filter(value => {
-    if (e === 'all') {
-      return value;
-    } else {
-      return value.horns === Number(e);}
-  })
-  });
+  handleInput = (e) => {
+
+    this.setState({ filteredData: this.state.newData.filter(beast => {
+      if (e === 'all') {
+        return beast;
+      } else {
+        return beast.horns === +e;}
+    })
+    });
   };
 
   render() {
